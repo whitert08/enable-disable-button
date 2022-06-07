@@ -10,19 +10,14 @@ function stateHandle() {
 	var	file_inputs = true;
 
     for (indexList = 0; indexList < inputList.length; ++indexList) {
-      if(inputList[indexList].value == "") // cel putin unul dintre ele este gol || if(inputList[indexList].value == "" && inputList[indexList].files == null)
+      if(inputList[indexList].value == "") 
       {
         normal_inputs = false;
-        break; // nu are rost sa mai verificam si restu ca unul dintre ele oricum e gol
+        break; 
       }
-      //else if(inputList[indexList].files != null && inputList[indexList].files.length == 0)
-      //{
-      //  normal_inputs = false;
-      //  break; // nu are rost sa mai verificam si restu ca unul dintre ele oricum e gol
-      //}
-      //console.log(normal_inputs);
     }
-	
+
+    //Thanks to my brother Tiger for the below idea
     var inputCount = 3;
 
     for(var indexTest = 0; indexTest < inputCount; ++indexTest)
@@ -30,7 +25,7 @@ function stateHandle() {
         var browseElement = $("#browse" + indexTest)[0];
         var cameraElement = $("#camera" + indexTest)[0];
         
-        if(browseElement.files.length == 0 && cameraElement.files.length == 0) // Daca intr-o sectiune ambele sunt goale
+        if(browseElement.files.length == 0 && cameraElement.files.length == 0)
         {
             file_inputs = false;
             break;
