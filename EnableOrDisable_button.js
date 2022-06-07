@@ -10,17 +10,11 @@ function stateHandle() {
 	var	file_inputs = true;
 
     for (indexList = 0; indexList < inputList.length; ++indexList) {
-      if(inputList[indexList].value == "") // cel putin unul dintre ele este gol || if(inputList[indexList].value == "" && inputList[indexList].files == null)
+      if(inputList[indexList].value == "") 
       {
         normal_inputs = false;
-        break; // nu are rost sa mai verificam si restu ca unul dintre ele oricum e gol
+        break;
       }
-      //else if(inputList[indexList].files != null && inputList[indexList].files.length == 0)
-      //{
-      //  normal_inputs = false;
-      //  break; // nu are rost sa mai verificam si restu ca unul dintre ele oricum e gol
-      //}
-      //console.log(normal_inputs);
     }
 	
 	
